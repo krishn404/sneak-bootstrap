@@ -6,7 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Demo</title>
+    <title>Sneaky Toons</title>
+    <style>
+        .image-container {
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,81 +45,131 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="adidas.html">Adidas</a>
+                    <a class="nav-link" href="#nike">Nike</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="nike.html">Nike</a>
+                    <a class="nav-link" href="#adidas">Adidas</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Shoes Collection -->
-<div class="container collection-container mt-4">
+<!-- Nike Collection -->
+<div class="container collection-container mt-4" id="nike">
     <div class="text-center">
         <div class="collection-heading">Nike Collection</div>
-        <div class="collection-subheading text-black">Showcasing the aesthetic collection of Nike's clothes and sneakers </div>
+        <div class="collection-subheading text-black">Showcasing the aesthetic collection of Nike's clothes and sneakers</div>
     </div>
 
     <div class="row">
         <!-- Image 1 -->
         <div class="col-md-3 mb-4">
-            <div class="image-container">
+            <div class="image-container" data-bg-color="#ff3535b8">
                 <img src="https://i.pinimg.com/564x/f5/f0/5e/f5f05efc55fd5ae6eeb9a43b7b7bd448.jpg" alt="Shoe 1" class="img-fluid">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>Shoe 1</h4>
+                        <p>$100</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Repeat for other images... -->
         <!-- Image 2 -->
         <div class="col-md-3 mb-4">
-            <div class="image-container">
+            <div class="image-container" data-bg-color="#999EB3">
                 <img src="https://i.pinimg.com/564x/16/fb/83/16fb83d1a1eb8a774eee9e743c3b8924.jpg" alt="Shoe 2" class="img-fluid">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>Shoe 2</h4>
+                        <p>$120</p>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Image 3 -->
         <div class="col-md-3 mb-4">
-            <div class="image-container">
+            <div class="image-container" data-bg-color="#507ba7">
                 <img src="https://i.pinimg.com/736x/bf/ba/04/bfba04f02f8251f758077ea315c67147.jpg" alt="Shoe 3" class="img-fluid">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>Shoe 3</h4>
+                        <p>$130</p>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Image 4 -->
         <div class="col-md-3 mb-4">
-            <div class="image-container">
+            <div class="image-container" data-bg-color="#ffdd79">
                 <img src="https://i.pinimg.com/564x/40/db/85/40db8509d6503858d049398d309a2299.jpg" alt="Shoe 4" class="img-fluid">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>Shoe 4</h4>
+                        <p>$140</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Clothes Collection -->
-<div class="container collection-container mt-4">
+<!-- Adidas Collection -->
+<div class="container collection-container mt-4" id="adidas">
     <div class="text-center">
         <div class="collection-heading">Adidas Collection</div>
-        <div class="collection-subheading text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="collection-subheading text-black">Showcasing the latest collection of Adidas clothes and sneakers</div>
     </div>
 
     <div class="row">
         <!-- Image 1 -->
         <div class="col-md-3 mb-4">
-            <div class="image-container">
-                <img src="https://i.pinimg.com/564x/2f/c4/4f/2fc44f60e9da5894662f0107ae1cd51a.jpg" alt="Clothes 1" class="img-fluid" >
+            <div class="image-container" data-bg-color="#ffc072">
+                <img src="https://i.pinimg.com/564x/2f/c4/4f/2fc44f60e9da5894662f0107ae1cd51a.jpg" alt="Clothes 1" class="img-fluid">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>Clothes 1</h4>
+                        <p>$80</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- Repeat for other images... -->
         <!-- Image 2 -->
         <div class="col-md-3 mb-4">
-            <div class="image-container">
+            <div class="image-container" data-bg-color="#f1863a">
                 <img src="https://i.pinimg.com/564x/77/f8/be/77f8beda6f626b6bcd2541e012414322.jpg" alt="Clothes 2" class="img-fluid">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>Clothes 2</h4>
+                        <p>$90</p>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Image 3 -->
         <div class="col-md-3 mb-4">
-            <div class="image-container">
+            <div class="image-container" data-bg-color="#76A2A3">
                 <img src="https://i.pinimg.com/564x/3c/17/b0/3c17b05b9791aa3960a7536cbb96b909.jpg" alt="Clothes 3" class="img-fluid">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>Clothes 3</h4>
+                        <p>$100</p>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Image 4 -->
         <div class="col-md-3 mb-4">
-            <div class="image-container">
-                <img src="https://i.pinimg.com/564x/7a/5f/47/7a5f472aad35cad492daa092073c80a8.jpg" alt="Clothes 4" class="img-fluid">
+            <div class="image-container" data-bg-color="#5f9afb">
+                <img src="https://i.pinimg.com/564x/7a/5f/47/7a5f472aad35cad492daa092073c80a8.jpg" alt="Clothes 4" style="height: 324px;" class="img-fluid">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>Clothes 4</h4>
+                        <p>$110</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -117,11 +189,27 @@
         </a>
     </div>
 
-    <div class="footer-copyright text-center py-3">
+    <div class="text-center py-3">
         Krishna Kant Maharshi
     </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const imageContainers = document.querySelectorAll('.image-container');
+
+    imageContainers.forEach(container => {
+        container.addEventListener('mouseenter', function() {
+            document.body.style.backgroundColor = container.getAttribute('data-bg-color');
+        });
+
+        container.addEventListener('mouseleave', function() {
+            document.body.style.backgroundColor = '';
+        });
+    });
+});
+</script>
 </body>
 </html>
